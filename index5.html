@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>精品咖啡</title>
+
+    <style>
+        /* ==========================
+           Reset
+        ========================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background: #f8f6f2;
+            color: #333333;
+        }
+
+        /* ==========================
+           Hero Section
+        ========================== */
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            gap: 24px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #b45309;
+            letter-spacing: 2px;
+        }
+
+        .hero-text {
+            max-width: 680px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #666666;
+        }
+
+        .hero-button {
+            background: #b45309;
+            color: #ffffff;
+
+            border: none;
+            border-radius: 999px;
+
+            padding: 16px 42px;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .hero-button:hover {
+            background: #92400e;
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(180, 83, 9, 0.35);
+        }
+
+        .hero-button:active {
+            transform: translateY(0);
+        }
+
+        /* ==========================
+           RWD
+        ========================== */
+        @media (max-width: 768px) {
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .hero-button {
+                width: 100%;
+                max-width: 280px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <h1 class="hero-title">
+            精品咖啡
+        </h1>
+
+        <p class="hero-text">
+            嚴選世界各地優質咖啡豆，透過專業烘焙工藝，
+            帶來濃郁香氣與細緻口感，讓每一杯咖啡都值得細細品味。
+        </p>
+
+        <button class="hero-button">
+            立即購買
+        </button>
+
+    </section>
+
+</body>
+</html>
