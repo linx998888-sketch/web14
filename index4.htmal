@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>精品咖啡商品列表</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft JhengHei",Arial,sans-serif;background:#f8f6f2;color:#333}
+.products{max-width:1200px;margin:60px auto;padding:24px}
+.section-title{text-align:center;font-size:2.2rem;color:#4b2e1e;margin-bottom:12px}
+.section-desc{text-align:center;color:#666;margin-bottom:40px}
+.product-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:24px;
+ align-items:stretch;
+}
+.product-card{
+ background:#fff;
+ border-radius:16px;
+ overflow:hidden;
+ box-shadow:0 8px 18px rgba(0,0,0,.12);
+ display:flex;
+ flex-direction:column;
+ transition:.3s;
+}
+.product-card:hover{transform:translateY(-8px)}
+.product-image{width:100%;height:220px;object-fit:cover}
+.product-content{padding:20px;display:flex;flex-direction:column;flex:1}
+.product-title{font-size:1.35rem;color:#4b2e1e;margin-bottom:10px}
+.product-description{color:#666;line-height:1.7;flex:1}
+.product-price{font-size:1.3rem;color:#b8860b;font-weight:bold;margin:18px 0}
+.product-button{
+ border:none;background:#6f4e37;color:#fff;padding:12px;
+ border-radius:999px;cursor:pointer;font-size:1rem
+}
+.product-button:hover{background:#4b2e1e}
+@media(max-width:900px){
+ .product-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+ .product-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<section class="products">
+<h2 class="section-title">精品咖啡商品</h2>
+<p class="section-desc">精選六款人氣咖啡，享受每一口香醇。</p>
+
+<div class="product-grid">
+
+<article class="product-card">
+<img class="product-image" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="美式咖啡" loading="lazy">
+<div class="product-content">
+<h3 class="product-title">美式咖啡</h3>
+<p class="product-description">經典黑咖啡，香醇順口。</p>
+<div class="product-price">NT$120</div>
+<button class="product-button">立即購買</button>
+</div>
+</article>
+
+<article class="product-card">
+<img class="product-image" src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=900&q=80" alt="經典拿鐵" loading="lazy">
+<div class="product-content">
+<h3 class="product-title">經典拿鐵</h3>
+<p class="product-description">濃縮咖啡搭配鮮奶。</p>
+<div class="product-price">NT$150</div>
+<button class="product-button">立即購買</button>
+</div>
+</article>
+
+<article class="product-card">
+<img class="product-image" src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=900&q=80" alt="卡布奇諾" loading="lazy">
+<div class="product-content">
+<h3 class="product-title">卡布奇諾</h3>
+<p class="product-description">綿密奶泡與濃郁咖啡。</p>
+<div class="product-price">NT$160</div>
+<button class="product-button">立即購買</button>
+</div>
+</article>
+
+<article class="product-card">
+<img class="product-image" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=80" alt="摩卡咖啡" loading="lazy">
+<div class="product-content">
+<h3 class="product-title">摩卡咖啡</h3>
+<p class="product-description">巧克力與咖啡完美融合。</p>
+<div class="product-price">NT$170</div>
+<button class="product-button">立即購買</button>
+</div>
+</article>
+
+<article class="product-card">
+<img class="product-image" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=80" alt="焦糖瑪奇朵" loading="lazy">
+<div class="product-content">
+<h3 class="product-title">焦糖瑪奇朵</h3>
+<p class="product-description">焦糖香甜、奶香濃郁。</p>
+<div class="product-price">NT$180</div>
+<button class="product-button">立即購買</button>
+</div>
+</article>
+
+<article class="product-card">
+<img class="product-image" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80" alt="冷萃咖啡" loading="lazy">
+<div class="product-content">
+<h3 class="product-title">冷萃咖啡</h3>
+<p class="product-description">低溫慢萃，清爽回甘。</p>
+<div class="product-price">NT$200</div>
+<button class="product-button">立即購買</button>
+</div>
+</article>
+</div>
+</section>
+</body>
+</html>

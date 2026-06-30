@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>咖啡商品卡片</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft JhengHei", Arial, sans-serif;
+      background: #f6f1eb;
+      color: #333;
+    }
+
+    .featured-products {
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #4b2e1e;
+    }
+
+    .product-list {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      width: 320px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 25px rgba(75, 46, 30, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 35px rgba(75, 46, 30, 0.22);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .product-name {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #3f2417;
+    }
+
+    .product-description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    .price {
+      display: block;
+      font-size: 20px;
+      font-weight: bold;
+      color: #b45309;
+      margin-bottom: 20px;
+    }
+
+    .buy-button {
+      border: none;
+      background: #6b3f26;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .buy-button:hover {
+      background: #3f2417;
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 30px;
+      }
+
+      .product-card {
+        width: 100%;
+        max-width: 360px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="featured-products">
+    <h2 class="section-title">精選咖啡商品</h2>
+
+    <div class="product-list">
+
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="美式咖啡">
+        <h3 class="product-name">美式咖啡</h3>
+        <p class="product-description">香醇黑咖啡，口感清爽順口，適合每日醒腦時刻。</p>
+        <span class="price">NT$120</span>
+        <button class="buy-button">立即購買</button>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=80" alt="拿鐵咖啡">
+        <h3 class="product-name">拿鐵咖啡</h3>
+        <p class="product-description">濃縮咖啡搭配鮮奶，奶香濃郁，口感溫潤滑順。</p>
+        <span class="price">NT$150</span>
+        <button class="buy-button">立即購買</button>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="卡布奇諾">
+        <h3 class="product-name">卡布奇諾</h3>
+        <p class="product-description">綿密奶泡與濃縮咖啡完美融合，層次香氣迷人。</p>
+        <span class="price">NT$160</span>
+        <button class="buy-button">立即購買</button>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="摩卡咖啡">
+        <h3 class="product-name">摩卡咖啡</h3>
+        <p class="product-description">咖啡結合巧克力香氣，甜苦平衡，適合午後享用。</p>
+        <span class="price">NT$170</span>
+        <button class="buy-button">立即購買</button>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="焦糖瑪奇朵">
+        <h3 class="product-name">焦糖瑪奇朵</h3>
+        <p class="product-description">香甜焦糖搭配濃縮咖啡，甜而不膩，風味柔和。</p>
+        <span class="price">NT$180</span>
+        <button class="buy-button">立即購買</button>
+      </article>
+
+      <article class="product-card">
+        <img class="product-image" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=80" alt="冷萃咖啡">
+        <h3 class="product-name">冷萃咖啡</h3>
+        <p class="product-description">低溫慢萃，酸度柔和，帶有清爽回甘的細緻風味。</p>
+        <span class="price">NT$190</span>
+        <button class="buy-button">立即購買</button>
+      </article>
+
+    </div>
+  </section>
+
+</body>
+</html>
