@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>完整導覽列範例</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft JhengHei", Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+
+    .navbar {
+      width: 100%;
+      background: #111827;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+      color: #38bdf8;
+    }
+
+    .nav-button {
+      background: #38bdf8;
+      color: #111827;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-button:hover {
+      background: #0ea5e9;
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 6px;
+    }
+
+    .hamburger span {
+      width: 28px;
+      height: 3px;
+      background: white;
+      border-radius: 4px;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+      background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .hero-content p {
+      font-size: 20px;
+      margin-bottom: 32px;
+      color: #4b5563;
+    }
+
+    .hero-content a {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .hero-content a:hover {
+      background: #38bdf8;
+      color: #111827;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #111827;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        display: none;
+      }
+
+      .nav-menu li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .nav-menu a {
+        display: block;
+        padding: 18px;
+      }
+
+      .nav-button {
+        margin: 16px 0;
+        display: inline-block;
+      }
+
+      .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+      }
+
+      .hero-content h1 {
+        font-size: 36px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+
+      <a href="#" class="logo">SPORT COACH</a>
+
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+      <ul class="nav-menu">
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#services">服務項目</a></li>
+        <li><a href="#courses">課程內容</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+        <li><a href="#signup" class="nav-button">立即報名</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>專業運動教練課程</h1>
+      <p>打造你的專業形象，讓學員更信任你的訓練服務。</p>
+      <a href="#signup">開始報名</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>關於我們</h2>
+    <p>
+      我們提供專業運動教練訓練課程，協助學員提升體能、技巧與教學能力。
+    </p>
+  </section>
+
+  <section class="section" id="services">
+    <h2>服務項目</h2>
+    <p>
+      包含一對一訓練、團體課程、體能評估、姿勢矯正與運動課程規劃。
+    </p>
+  </section>
+
+  <section class="section" id="courses">
+    <h2>課程內容</h2>
+    <p>
+      課程涵蓋基礎體能、動作訓練、教學技巧、學員管理與實務演練。
+    </p>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>聯絡我們</h2>
+    <p>
+      LINE：@sportcoach<br>
+      電話：0912-345-678<br>
+      Email：coach@example.com
+    </p>
+  </section>
+
+  <section class="section" id="signup">
+    <h2>立即報名</h2>
+    <p>
+      歡迎填寫報名表單，開啟你的專業運動教練之路。
+    </p>
+  </section>
+
+</body>
+</html>
