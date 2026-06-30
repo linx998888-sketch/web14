@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS 權重覆蓋模擬案例</title>
+
+  <style>
+    /* =========================
+       Reset
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* =========================
+       Global
+    ========================= */
+    body {
+      font-family: "Microsoft JhengHei", Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       Layout
+    ========================= */
+    .demo-section {
+      min-height: 100vh;
+      padding: 80px 24px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .demo-card {
+      width: 100%;
+      max-width: 760px;
+      padding: 48px 36px;
+
+      background-color: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 20px 50px rgba(17, 24, 39, 0.12);
+
+      text-align: center;
+    }
+
+    .demo-title {
+      font-size: 36px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+
+    .demo-text {
+      font-size: 18px;
+      color: #4b5563;
+      margin-bottom: 32px;
+    }
+
+    .button-wrapper {
+      margin-bottom: 32px;
+    }
+
+    /* =========================
+       一般按鈕樣式
+       原本想讓按鈕呈現咖啡色
+    ========================= */
+    .demo-button {
+      background-color: #b45309;
+      color: #ffffff;
+
+      border: none;
+      border-radius: 999px;
+
+      padding: 16px 40px;
+
+      font-size: 18px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    /* =========================
+       模擬高權重 CSS
+       這段會把原本的咖啡色覆蓋成紅色
+    ========================= */
+    .demo-section .demo-card .button-wrapper .demo-button {
+      background-color: #dc2626;
+    }
+
+    /* =========================
+       急救覆蓋方案
+       使用 !important 強制讓按鈕變成亮綠色
+    ========================= */
+    .demo-button {
+      background-color: #059669 !important;
+    }
+
+    .demo-button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(5, 150, 105, 0.35);
+    }
+
+    .note-box {
+      text-align: left;
+      background-color: #f3f4f6;
+      border-left: 6px solid #059669;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .note-title {
+      font-size: 20px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .note-list {
+      padding-left: 20px;
+      color: #374151;
+    }
+
+    .note-item {
+      margin-bottom: 8px;
+    }
+
+    .code-text {
+      font-family: Consolas, Monaco, monospace;
+      font-weight: 700;
+      color: #059669;
+    }
+
+    /* =========================
+       RWD
+    ========================= */
+    @media (max-width: 768px) {
+      .demo-section {
+        padding: 56px 20px;
+      }
+
+      .demo-card {
+        padding: 36px 24px;
+      }
+
+      .demo-title {
+        font-size: 30px;
+      }
+
+      .demo-text {
+        font-size: 16px;
+      }
+
+      .demo-button {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="demo-section">
+    <div class="demo-card">
+
+      <h1 class="demo-title">CSS 權重覆蓋模擬案例</h1>
+
+      <p class="demo-text">
+        這個範例示範：當按鈕顏色被更高權重的 CSS 覆蓋時，
+        如何使用 <span class="code-text">!important</span>
+        強制讓按鈕呈現亮綠色。
+      </p>
+
+      <div class="button-wrapper">
+        <button class="demo-button">
+          立即報名
+        </button>
+      </div>
+
+      <div class="note-box">
+        <h2 class="note-title">本範例的 CSS 流程</h2>
+
+        <ul class="note-list">
+          <li class="note-item">
+            一開始按鈕設定為咖啡色：
+            <span class="code-text">#b45309</span>
+          </li>
+
+          <li class="note-item">
+            接著高權重選擇器把按鈕覆蓋成紅色：
+            <span class="code-text">#dc2626</span>
+          </li>
+
+          <li class="note-item">
+            最後使用：
+            <span class="code-text">background-color: #059669 !important;</span>
+            強制覆蓋成功。
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

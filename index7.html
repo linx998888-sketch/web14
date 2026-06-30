@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>課程特色介紹區塊</title>
+
+  <style>
+    /* =========================
+       Reset
+    ========================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* =========================
+       Global
+    ========================= */
+    body {
+      font-family: "Microsoft JhengHei", Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    /* =========================
+       Course Features Section
+    ========================= */
+    .course-features {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .course-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .course-title {
+      font-size: 36px;
+      font-weight: 800;
+      color: #b45309;
+      margin-bottom: 16px;
+    }
+
+    .course-description {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #374151;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature-card {
+      background-color: #ffffff;
+      border-radius: 18px;
+      padding: 32px 28px;
+      box-shadow: 0 12px 30px rgba(17, 24, 39, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(17, 24, 39, 0.12);
+    }
+
+    .feature-number {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      background-color: #b45309;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .feature-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .feature-text {
+      font-size: 16px;
+      color: #4b5563;
+    }
+
+    /* =========================
+       RWD
+    ========================= */
+    @media (max-width: 768px) {
+      .course-features {
+        padding: 56px 20px;
+      }
+
+      .course-title {
+        font-size: 30px;
+      }
+
+      .course-description {
+        font-size: 16px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .feature-card {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="course-features">
+    <div class="course-header">
+      <h2 class="course-title">課程特色介紹</h2>
+      <p class="course-description">
+        透過系統化學習、實務案例演練與清楚的進度安排，幫助學員快速掌握核心技能。
+      </p>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-number">1</span>
+        <h3 class="feature-title">系統化教學</h3>
+        <p class="feature-text">
+          從基礎觀念到進階應用，依照學習階段逐步安排，讓初學者也能穩定跟上。
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">2</span>
+        <h3 class="feature-title">實務案例演練</h3>
+        <p class="feature-text">
+          結合真實情境與操作練習，讓學員不只理解理論，也能實際應用到工作中。
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">3</span>
+        <h3 class="feature-title">彈性學習進度</h3>
+        <p class="feature-text">
+          課程內容清楚分段，適合依照個人時間安排學習，提升完成率與學習成效。
+        </p>
+      </article>
+    </div>
+  </section>
+
+</body>
+</html>
